@@ -1,0 +1,20 @@
+@import "src/GlobalStyles/global";
+
+.card-title {
+    font-family: $raleway;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 33px;
+    color: $orange;
+    text-shadow: 0px 0px 16px rgba($orange, .25);
+}
+
+.card-item {
+    height: 45px;
+    padding: 0px 15px;
+    border-radius: 7px;
+    background: rgba(92, 84, 76, 0.6);
+    overflow: hidden;
+}

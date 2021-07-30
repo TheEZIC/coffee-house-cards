@@ -1,0 +1,11 @@
+.payments {
+    &__input-group {
+        display: flex !important;
+    }
+    &__select {
+        width: 130px;
+    }
+    &__input {
+        flex: 1;
+    }
+}
