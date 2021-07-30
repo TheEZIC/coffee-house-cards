@@ -1,36 +1,30 @@
-name: Build and Deploy
+name: Deployment
 on:
   push:
     branches:
       - master
 jobs:
-  install-and-test:
+  deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [12.x]
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@master
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install and Test
-        run: |
-          npm i
-        env:
-          CI: true
-
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
-          BUILD_SCRIPT: yarn && yarn build
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install fsevents
+      run: npm i fsevents@latest -f --save-optional
+    - name: Install Packages
+      run: npm install
+    - name: Build page
+      run: npm run build
+      env:
+        CI: false
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.0.0
+      with:
+        branch: gh-pages
+        folder: build
