@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4bed2dee.chunk.css",
+    "main.js": "/static/js/main.2a232587.chunk.js",
+    "main.js.map": "/static/js/main.2a232587.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8363551f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8363551f.js.map",
+    "static/css/2.de253a8a.chunk.css": "/static/css/2.de253a8a.chunk.css",
+    "static/js/2.c04a3966.chunk.js": "/static/js/2.c04a3966.chunk.js",
+    "static/js/2.c04a3966.chunk.js.map": "/static/js/2.c04a3966.chunk.js.map",
+    "static/js/3.f0c65fb9.chunk.js": "/static/js/3.f0c65fb9.chunk.js",
+    "static/js/3.f0c65fb9.chunk.js.map": "/static/js/3.f0c65fb9.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.de253a8a.chunk.css.map": "/static/css/2.de253a8a.chunk.css.map",
+    "static/css/main.4bed2dee.chunk.css.map": "/static/css/main.4bed2dee.chunk.css.map",
+    "static/js/2.c04a3966.chunk.js.LICENSE.txt": "/static/js/2.c04a3966.chunk.js.LICENSE.txt",
+    "static/media/AfterwordCard.scss": "/static/media/afterwordBG.768b561d.png",
+    "static/media/paypal.743b7d7d.svg": "/static/media/paypal.743b7d7d.svg",
+    "static/media/qiwi.bc59a003.svg": "/static/media/qiwi.bc59a003.svg",
+    "static/media/sber.24891e4f.svg": "/static/media/sber.24891e4f.svg",
+    "static/media/webmoney.efc8b1f5.svg": "/static/media/webmoney.efc8b1f5.svg",
+    "static/media/yandex.85e2a619.svg": "/static/media/yandex.85e2a619.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8363551f.js",
+    "static/css/2.de253a8a.chunk.css",
+    "static/js/2.c04a3966.chunk.js",
+    "static/css/main.4bed2dee.chunk.css",
+    "static/js/main.2a232587.chunk.js"
+  ]
+}
