@@ -26,7 +26,7 @@ class MainInfo extends Component<IProps, IState> {
   onChange() {
     const {updateMainInfo} = this.props;
     const title = this.titleInput.current?.input?.value ?? "";
-    const {text} = this.state;
+    const {text} = this.state; 
 
     updateMainInfo({
       title,
