@@ -70,7 +70,7 @@ class AfterwordCard extends Component<IProps, IState> {
   render() {
     const {mainInfo, author} = this.props;
     return (
-      <div className="afterword-card">
+      <div className="afterword-card" id="afterword-card">
         <h2 className="card-title">{mainInfo.title}</h2>
         {this.renderMainInfoText()}
 

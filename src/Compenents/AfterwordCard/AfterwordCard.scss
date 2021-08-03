@@ -1,9 +1,13 @@
 @import "src/GlobalStyles/global";
 
+* {
+    box-sizing: border-box;
+}
+
 .afterword-card {
     position: relative;
     width: 860px;
-    min-height: 800px;
+    //min-height: 800px;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -16,6 +20,7 @@
     }
 
     &__text {
+        width: 100%;
         margin-bottom: 15px;
         font-family: $raleway;
         font-style: normal;
@@ -24,6 +29,7 @@
         line-height: 23px;
         text-indent: 40px;
         color: $text-color;
+        flex-grow: 1;
     }
 
     &__bg {
@@ -97,15 +103,16 @@ $third-color: #CD7F32;
 
 .payments {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px 35px;
+    gap: 15px 30px;
 
     &__item {
         display: flex;
         align-items: center;
         color: white;
         flex-grow: 1;
-        min-width: 380px;
+        min-width: 390px;
     }
 
     &__icon {
