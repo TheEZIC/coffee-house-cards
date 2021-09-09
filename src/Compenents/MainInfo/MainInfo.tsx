@@ -7,17 +7,20 @@ import {ThunkDispatch} from "redux-thunk";
 import {AnyAction} from "redux";
 import IMainInfo from "./IMainInfo";
 import {updateMainInfo} from "../../Actions/MainInfoActions";
+import ImageDrop from "../ImageDrop/ImageDrop";
 
 interface IProps extends ConnectedProps<typeof connector>{
 }
 
 interface IState {
   text: string;
+  background: string;
 }
 
 class MainInfo extends Component<IProps, IState> {
   state: IState = {
-    text: ""
+    text: "",
+    background: "",
   }
 
   titleInput = React.createRef<Input>();
@@ -26,11 +29,12 @@ class MainInfo extends Component<IProps, IState> {
   onChange() {
     const {updateMainInfo} = this.props;
     const title = this.titleInput.current?.input?.value ?? "";
-    const {text} = this.state;
+    const {text, background} = this.state;
 
     updateMainInfo({
       title,
       text,
+      background,
     });
   }
 
@@ -58,6 +62,15 @@ class MainInfo extends Component<IProps, IState> {
               }}
             />
           </Col>
+        </Row>
+        <Row className="input-group">
+          <ImageDrop
+            placeholder="Бекграунд"
+            onFile={bg => {
+              this.setState({background: bg});
+              this.onChange();
+            }}
+          />
         </Row>
       </>
     );

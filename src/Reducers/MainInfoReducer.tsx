@@ -7,6 +7,7 @@ interface InitialState extends IMainInfo {
 const initialState: InitialState = {
   title: "",
   text: "",
+  background: "",
 }
 
 export default function mainInfoReducer(state = initialState, action: AllMainInfoActions) {

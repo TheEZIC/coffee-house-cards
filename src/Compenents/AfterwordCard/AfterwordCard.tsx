@@ -98,7 +98,8 @@ class AfterwordCard extends Component<IProps, IState> {
           </div>
         </section>
 
-        <div className="afterword-card__bg"/>
+        <div className="afterword-card__blur"/>
+        <img className="afterword-card__bg" src={mainInfo.background}/>
       </div>
     );
   }
